@@ -7,7 +7,9 @@ function CakeContainer(props) {
     <div>
       <h2>Number of cakes: {props.numOfCakes}</h2>
       <button onClick={props.buyCake}>Buy Cake</button>
-      <button onClick={props.returnCake}>Return Cake</button>
+      <button onClick={props.returnCake} disabled={props.numOfCakes === 10}>
+        Return Cake
+      </button>
     </div>
   );
 }
